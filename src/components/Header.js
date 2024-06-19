@@ -4,7 +4,7 @@ import classes from "../styles/Header.module.css";
 import { useState } from "react";
 
 const Header = () => {
-  const [showSub, setShowSub] = useState("");
+  const [showSub, setShowSub] = useState("s");
   const openDropDown = (study) => {
     setShowSub(
       (showSub === "s" && study) || (showSub === "w" && !study)
