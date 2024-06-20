@@ -23,13 +23,31 @@ const Header = () => {
           <h2>Study Work Visa Guide</h2>
         </div>
         <div className={classes.header_content}>
-          <span onClick={() => openDropDown(true)}>
+          <span
+            onClick={() => openDropDown(true)}
+            className={showSub === "s" && classes.link}
+          >
             <p>Study Visa </p>
-            <Image src={down} width={20} />
+            <Image
+              src={down}
+              width={20}
+              style={{
+                rotate: showSub === "s" && "180deg",
+              }}
+            />
           </span>
-          <span onClick={() => openDropDown(false)}>
+          <span
+            onClick={() => openDropDown(false)}
+            className={showSub === "w" && classes.link}
+          >
             <p>Work Visa</p>
-            <Image src={down} width={20} />
+            <Image
+              src={down}
+              width={20}
+              style={{
+                rotate: showSub === "w" && "180deg",
+              }}
+            />
           </span>
         </div>
       </div>
