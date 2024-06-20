@@ -1,3 +1,4 @@
+import Ad from "@/components/Ad";
 import styles from "../styles/mainpage.module.css";
 export default function Home() {
   return (
@@ -21,18 +22,21 @@ export default function Home() {
         </p>
         <h1>Eligibility Requirements</h1>
         <p>Content here</p>
-        <p>ad here</p>
+        <Ad />
 
         <h1>Required Documentation</h1>
         <p>Content here</p>
-        <p>ad here</p>
+        <Ad />
         <h1>Application Process </h1>
         <p>Content here</p>
-        <p>ad here</p>
+        <Ad />
         <h1>Frequently Asked Questions (FAQs) </h1>
         <p>Content here</p>
       </div>
-      <div>ad here, ad here, ad here, ad here, ad here, ad here</div>
+      <div className={styles.ad}>
+        <Ad vertical={true} />
+        <Ad vertical={true} />
+      </div>
     </div>
   );
 }

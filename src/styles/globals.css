@@ -9,4 +9,5 @@ body {
 
 :root {
   --primary: #3498db;
+  --primaryFaded: #3498db88;
 }
