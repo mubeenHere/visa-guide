@@ -40,7 +40,16 @@
   color: white;
   padding: 20px 0;
   justify-content: center;
-  background-color: var(--primaryFaded);
+  background-image: linear-gradient(
+    to bottom,
+    var(--primaryFaded),
+    var(--primaryFaded),
+    var(--primaryFaded),
+    var(--primaryFaded),
+    var(--primaryFaded),
+    white
+  );
+  /* background-color: var(--primaryFaded); */
   transition: 0.5s all ease-in-out;
   overflow-y: scroll;
   &::-webkit-scrollbar {

@@ -30,8 +30,10 @@ export default function Home() {
         <h1>Application Process </h1>
         <p>Content here</p>
         <Ad />
+        <h1>Read more on official Website</h1>
+        <p>links here</p>
         <h1>Frequently Asked Questions (FAQs) </h1>
-        <p>Content here</p>
+        <p>static data here</p>
       </div>
       <div className={styles.ad}>
         <Ad vertical={true} />
