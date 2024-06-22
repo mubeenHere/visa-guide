@@ -13,9 +13,8 @@
   font-size: 50px;
 }
 
-.intro {
+.contentData {
   font-size: 18px;
-  text-align: justify;
 }
 .ad {
   display: flex;

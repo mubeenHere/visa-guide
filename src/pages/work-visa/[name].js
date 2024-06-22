@@ -5,7 +5,7 @@ import styles from "../../styles/mainpage.module.css";
 import Ad from "@/components/Ad";
 import Link from "next/link";
 
-const StudyVisaCountry = () => {
+const WorkVisaCountry = () => {
   const router = useRouter();
   const { name } = router.query;
 
@@ -13,13 +13,13 @@ const StudyVisaCountry = () => {
 
   useEffect(() => {
     if (name) {
-      fetch(`/api/country/study-visa/${encodeURIComponent(name)}`)
+      fetch(`/api/country/work-visa/${encodeURIComponent(name)}`)
         .then((response) => response.json())
         .then((data) => setCountryData(data))
         .catch((error) => console.error("Error fetching country data:", error));
     }
   }, [name]);
-
+  console.log(countryData);
   const renderSectionContent = (content, sectionTitle) => {
     if (Array.isArray(content)) {
       if (content.length > 0 && typeof content[0] === "object") {
@@ -79,14 +79,15 @@ const StudyVisaCountry = () => {
   if (!countryData) {
     return <p>Loading...</p>;
   }
+  if (countryData?.error) return <p>Not Found</p>;
 
   return (
     <div className={styles.main}>
       <Head>
-        <title>{`Study Visa Guide for ${name}`}</title>
+        <title>{`Work Visa Guide for ${name}`}</title>
       </Head>
       <div className={styles.content}>
-        <h1>{`How to Get a Study Visa for ${name}: Read Detailed Guide Here`}</h1>
+        <h1>{`How to Get a Work Visa for ${name}: Read Detailed Guide Here`}</h1>
         <p>{countryData.title}</p>
 
         {Object.entries(countryData.sections)?.map(
@@ -117,4 +118,4 @@ const StudyVisaCountry = () => {
   );
 };
 
-export default StudyVisaCountry;
+export default WorkVisaCountry;
