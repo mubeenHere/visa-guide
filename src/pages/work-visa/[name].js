@@ -1,9 +1,10 @@
+import Link from "next/link";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Head from "next/head";
-import styles from "../../styles/mainpage.module.css";
+
 import Ad from "@/components/Ad";
-import Link from "next/link";
+import styles from "../../styles/mainpage.module.css";
 
 const WorkVisaCountry = () => {
   const router = useRouter();
@@ -19,7 +20,6 @@ const WorkVisaCountry = () => {
         .catch((error) => console.error("Error fetching country data:", error));
     }
   }, [name]);
-  console.log(countryData);
   const renderSectionContent = (content, sectionTitle) => {
     if (Array.isArray(content)) {
       if (content.length > 0 && typeof content[0] === "object") {

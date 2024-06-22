@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+
 import logo from "../../public/logo.png";
 import down from "../../public/down.svg";
 import classes from "../styles/Header.module.css";
-import { useRouter } from "next/router";
 
 const Header = () => {
   const router = useRouter();
