@@ -4,6 +4,7 @@ import Head from "next/head";
 import styles from "../../styles/mainpage.module.css";
 import Ad from "@/components/Ad";
 import Link from "next/link";
+import Image from "next/image";
 
 const StudyVisaCountry = () => {
   const router = useRouter();
@@ -81,37 +82,41 @@ const StudyVisaCountry = () => {
   }
 
   return (
-    <div className={styles.main}>
+    <div>
       <Head>
         <title>{`Study Visa Guide for ${name}`}</title>
+        <meta name="og:title" content={countryData.title} />
       </Head>
-      <div className={styles.content}>
+      <div className={styles.banner}>
         <h1>{`How to Get a Study Visa for ${name}: Read Detailed Guide Here`}</h1>
         <p>{countryData.title}</p>
-
-        {Object.entries(countryData.sections)?.map(
-          ([sectionTitle, sectionContent], ind) => (
-            <div key={sectionTitle}>
-              <h2>{sectionTitle}</h2>
-              {Array.isArray(sectionContent) ? (
-                <>
-                  {sectionContent.map((item, index) => (
-                    <div key={index} className={styles.contentData}>
-                      {renderSectionContent(item, sectionTitle)}
-                    </div>
-                  ))}
-                  {ind % 2 == 0 && <Ad />}
-                </>
-              ) : (
-                renderSectionContent(sectionContent, sectionTitle)
-              )}
-            </div>
-          )
-        )}
       </div>
-      <div className={styles.ad}>
-        <Ad vertical={true} />
-        <Ad vertical={true} />
+      <div className={styles.main}>
+        <div className={styles.content}>
+          {Object.entries(countryData.sections)?.map(
+            ([sectionTitle, sectionContent], ind) => (
+              <div key={sectionTitle}>
+                <h2>{sectionTitle}</h2>
+                {Array.isArray(sectionContent) ? (
+                  <>
+                    {sectionContent.map((item, index) => (
+                      <div key={index} className={styles.contentData}>
+                        {renderSectionContent(item, sectionTitle)}
+                      </div>
+                    ))}
+                    {ind % 2 == 0 && <Ad />}
+                  </>
+                ) : (
+                  renderSectionContent(sectionContent, sectionTitle)
+                )}
+              </div>
+            )
+          )}
+        </div>
+        <div className={styles.ad}>
+          <Ad vertical={true} />
+          <Ad vertical={true} />
+        </div>
       </div>
     </div>
   );

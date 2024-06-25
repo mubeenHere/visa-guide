@@ -6,7 +6,7 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <div style={{ margin: "10%" }}>
+      <div>
         <Component {...pageProps} />
       </div>
       <Footer />

@@ -1,6 +1,11 @@
 export default function handler(req, res) {
   res.status(200).json({
-    work: ["UAE", "USA", "Canada", "Australia"],
-    study: ["UAE", "USA", "Canada", "Australia"],
+    work: ["Jobs in UAE", "Jobs in USA", "Jobs in Canada", "Jobs in Australia"],
+    study: [
+      "Study in UAE",
+      "Study in USA",
+      "Study in Canada",
+      "Study in Australia",
+    ],
   });
 }

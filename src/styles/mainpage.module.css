@@ -1,6 +1,7 @@
 .main {
   display: flex;
   justify-content: space-between;
+  margin: 5% 10%;
 }
 .content {
   display: flex;
@@ -21,4 +22,30 @@
   flex-direction: column;
   gap: 50px;
   width: 25%;
+}
+.banner {
+  height: 450px;
+  position: relative;
+  background-image: url("../../public//banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding-left: 100px;
+}
+.banner::before {
+  content: "'";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, rgb(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+.banner > * {
+  width: 50%;
+  z-index: 2;
 }

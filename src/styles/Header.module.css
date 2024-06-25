@@ -12,7 +12,7 @@
   .logo {
     display: inherit;
     gap: 20px;
-    color: var(--primary);
+    color: rgb(29, 29, 29);
     align-items: center;
   }
 }
@@ -31,24 +31,26 @@
     color: rgb(0, 0, 0, 0.6);
     text-shadow: 0px 0px 8px white;
     font-weight: bold;
+    text-decoration: underline;
   }
 }
 .sub_header {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  color: white;
+  color: black;
+  font-weight: 500;
   padding: 20px 0;
   justify-content: center;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom,
     var(--primaryFaded),
     var(--primaryFaded),
     var(--primaryFaded),
     var(--primaryFaded),
     var(--primaryFaded),
-    white
-  );
+    white */
+  /* ); */
   /* background-color: var(--primaryFaded); */
   /* transition: 0.5s all ease-in-out; */
   overflow-y: scroll;
@@ -66,6 +68,7 @@
 }
 .country:hover {
   color: var(--primary);
+  text-decoration: underline;
 }
 .hide {
   height: 0;
