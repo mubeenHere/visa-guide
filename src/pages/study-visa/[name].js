@@ -96,7 +96,7 @@ const StudyVisaCountry = () => {
           {Object.entries(countryData.sections)?.map(
             ([sectionTitle, sectionContent], ind) => (
               <div key={sectionTitle}>
-                <h2>{sectionTitle}</h2>
+                <h2 className={styles.sectionTitle}>{sectionTitle}</h2>
                 {Array.isArray(sectionContent) ? (
                   <>
                     {sectionContent.map((item, index) => (

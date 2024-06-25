@@ -9,7 +9,20 @@
   gap: 20px;
   width: 70%;
 }
-
+.sectionTitle {
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.sectionTitle::after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 80px;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to right, var(--primary), white);
+}
 .header {
   font-size: 50px;
 }
